@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/' });
+const API = axios.create({ baseURL: 'https://humanstore.herokuapp.com/' });
 
 export const fetchProducts = () => API.get('/products');
 export const fetchSingleProduct = (id) => API.get(`/products/detail/${id}`);
