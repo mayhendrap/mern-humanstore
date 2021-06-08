@@ -29,8 +29,6 @@ export default (state = initialState, {type, payload}) => {
                     products: state.products.map(product =>
                     product.productId === payload.productId ? {...product, productQty: product.productQty - 1, totalPrice: product.price * (product.productQty - 1)} : product)
                 }
-            } else {
-                return {...state, products: [...state.products, payload]};
             }
         case REMOVE_PRODUCT_FROM_CART:
             return {
